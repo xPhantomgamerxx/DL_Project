@@ -63,7 +63,7 @@ parser.add_argument('--eval',           dest='eval', action='store_true',   help
 parser.add_argument('--output',         type=str,   default="",     help='Save a log of output to this file name');
 
 ## Training
-parser.add_argument('--gpu',            type=int,   default=9,      help='GPU index');
+parser.add_argument('--gpu',            type=int,   default=3,      help='GPU index');
 
 args = parser.parse_args();
 
