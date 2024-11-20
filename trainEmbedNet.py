@@ -10,7 +10,9 @@ import glob
 import datetime
 import numpy
 import logging
+import torch
 from EmbedNet import *
+from early_stopping import *
 from DatasetLoader import get_data_loader
 from sklearn import metrics
 import torchvision.transforms as transforms
@@ -49,10 +51,10 @@ parser.add_argument('--initial_model',  type=str,   default="",     help='Initia
 parser.add_argument('--save_path',      type=str,   default="exps/exp1", help='Path for model and logs');
 
 ## Training and evaluation data
-parser.add_argument('--train_path',     type=str,   default="data/train",   help='Absolute path to the train set');
+parser.add_argument('--train_path',     type=str,   default="/mnt/home/joonson/ee488_24_data/train1",   help='Absolute path to the train set');
 parser.add_argument('--train_ext',      type=str,   default="jpg",  help='Training files extension');
-parser.add_argument('--test_path',      type=str,   default="data/val",     help='Absolute path to the test set');
-parser.add_argument('--test_list',      type=str,   default="data/val_pairs.csv",   help='Evaluation list');
+parser.add_argument('--test_path',      type=str,   default="/mnt/home/joonson/ee488_24_data/val",     help='Absolute path to the test set');
+parser.add_argument('--test_list',      type=str,   default="/mnt/home/joonson/ee488_24_data/val_pairs.csv",   help='Evaluation list');
 
 ## Model definition
 parser.add_argument('--model',          type=str,   default="ResNet18", help='Name of model definition');
@@ -74,13 +76,14 @@ args = parser.parse_args();
 def compute_eer(all_labels,all_scores):
 
     # compute receiver operating characteristic (ROC) for binary classification
-    # (write your code here)
+    fpr, tpr, thresholds = metrics.roc_curve(all_labels, all_scores)
 
     # calculate false negative rate (FNR)
-    # (write your code here)
+    fnr = 1 - tpr
 
     # calculate equal error rate (EER). The EER is the error rate at which FNR is equal to FPR.
-    # (write your code here)
+    eer_threshold_index = numpy.nanargmin(numpy.abs(fnr - fpr))
+    EER = fpr[eer_threshold_index]
 
     return EER
 
@@ -90,6 +93,7 @@ def compute_eer(all_labels,all_scores):
 
 def main_worker(args):
 
+    early_stopping = EarlyStopping(patience=5, min_delta=0.01, path=args.save_path + '/best_model_checkpoint.pt')
     logger = logging.getLogger(__name__)
 
     logging.basicConfig(
@@ -169,18 +173,27 @@ def main_worker(args):
     for ep in range(ep,args.max_epoch+1):
 
         clr = [x['lr'] for x in trainer.__optimizer__.param_groups]
-
         logger.info("Epoch {:04d} started with LR {:.5f} ".format(ep,max(clr)));
+        # train step
         loss = trainer.train_network(trainLoader);
         logger.info("Epoch {:04d} completed with TLOSS {:.5f}".format(ep,loss));
 
         if ep % args.test_interval == 0:
-            
+            # validation step
             sc, lab, trials = trainer.evaluateFromList(transform=test_transform, **vars(args))
             EER = compute_eer(lab, sc)
-
             logger.info("Epoch {:04d}, Val EER {:.2f}%".format(ep, EER*100));
+
+            # save model params
             trainer.saveParameters(args.save_path+"/epoch{:04d}.model".format(ep));
+
+            # Early Stopping Check
+            val_loss = EER  # Using EER as a proxy for validation loss
+            early_stopping(val_loss, model)
+
+            if early_stopping.early_stop:
+                print("Early stopping triggered. Stopping training.")
+                break
 
 # ## ===== ===== ===== ===== ===== ===== ===== =====
 # ## Main function

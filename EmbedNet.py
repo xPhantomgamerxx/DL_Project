@@ -78,17 +78,17 @@ class ModelTrainer(object):
                 data    = data.transpose(1,0)
 
                 ## Reset gradients
-                # (write your code here)
+                self.__optimizer__.zero_grad()
 
                 ## Forward pass and compute loss
                 nloss = self.__model__(data.cuda(), label.cuda())
                 ## Backward pass
-                # (write your code here)
+                nloss.backward()
                 ## Optimizer step
-                # (write your code here)
+                self.__optimizer__.step()
 
                 ## Keep cumulative statistics
-                loss    += # (write your code here)
+                loss    += nloss.item()
                 counter += 1;
 
                 # Print statistics to progress bar
@@ -153,7 +153,7 @@ class ModelTrainer(object):
             com_feat = feats[data[2]]
 
             ## Find cosine similarity score
-            score = # (write your code here)
+            score = F.cosine_similarity(ref_feat, com_feat, dim=-1)
 
             all_scores.append(score.item());  
             all_labels.append(int(data[0]));
