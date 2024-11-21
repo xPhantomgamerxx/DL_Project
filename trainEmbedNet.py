@@ -24,13 +24,13 @@ import torchvision.transforms as transforms
 parser = argparse.ArgumentParser(description = "Face Recognition Training");
 
 ## Data loader
-parser.add_argument('--batch_size',         type=int, default=100,	help='Batch size, defined as the number of classes per batch');
+parser.add_argument('--batch_size',         type=int, default=100,	help='Batch size, defined as the number of classes per batch, EfficientNet: 85, MobileNet: default, DenseNet:32');
 parser.add_argument('--max_img_per_cls',    type=int, default=500,	help='Maximum number of images per class per epoch');
 parser.add_argument('--nDataLoaderThread',  type=int, default=5, 	help='Number of data loader threads');
 
 ## Training details
-parser.add_argument('--test_interval',  type=int,   default=5,      help='Test and save every [test_interval] epochs');
-parser.add_argument('--max_epoch',      type=int,   default=50,    help='Maximum number of epochs');
+parser.add_argument('--test_interval',  type=int,   default=1,      help='Test and save every [test_interval] epochs');
+parser.add_argument('--max_epoch',      type=int,   default=25,     help='Maximum number of epochs');
 parser.add_argument('--trainfunc',      type=str,   default="softmax",  help='Loss function to use');
 
 ## Optimizer
