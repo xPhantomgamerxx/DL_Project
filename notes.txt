@@ -1,0 +1,8 @@
+trained efficient net with 8 epochs on train1 and then up to 17 on train2 to get eer or 11.02%
+    trained with adam with batch size 85 then 25
+
+trained densenet for 5 epochs with train 1 and then 10 epochs with train2, best eer after 13 epochs at 9.93$
+    trained wiht adabound with batch size 60 then 20
+
+Resnet trained for 7 epochs with adam batch size 100 with train1 then 12 epochs with train2 best eer after epoch 19 9.63%
+    trained with adam batch size 100 then 30

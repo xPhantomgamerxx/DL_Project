@@ -117,6 +117,16 @@ def main_worker(args):
          transforms.Resize(256),
          transforms.RandomCrop([224,224]),
          transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
+    
+    train2_transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Resize(256),
+        transforms.RandomHorizontalFlip(p=0.5),  
+        transforms.RandomRotation(15),          
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),  
+        transforms.RandomCrop([224, 224]),      
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  
+    ])
 
     ## Input transformations for evaluation (you can change if you like)
     test_transform = transforms.Compose(
@@ -126,7 +136,7 @@ def main_worker(args):
          transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
 
     ## Initialise trainer and data loader
-    trainLoader = get_data_loader(transform=train_transform, **vars(args));
+    trainLoader = get_data_loader(transform=train2_transform, **vars(args));
     trainer     = ModelTrainer(model, **vars(args))
 
     ## Load model weights
@@ -152,18 +162,13 @@ def main_worker(args):
     
     ## Evaluation code 
     if args.eval == True:
-
         sc, lab, trials = trainer.evaluateFromList(transform=test_transform, **vars(args))
-        
         EER = compute_eer(lab, sc)
-
         print('EER {:.2f}%'.format(EER*100))
-
         if args.output != '':
             with open(args.output,'w') as f:
                 for ii in range(len(sc)):
                     f.write('{:4f},{:d},{}\n'.format(sc[ii],lab[ii],trials[ii]))
-
         quit();
 
     ## Log arguments
@@ -171,9 +176,9 @@ def main_worker(args):
 
     ## Core training script
     for ep in range(ep,args.max_epoch+1):
-
         clr = [x['lr'] for x in trainer.__optimizer__.param_groups]
         logger.info("Epoch {:04d} started with LR {:.5f} ".format(ep,max(clr)));
+
         # train step
         loss = trainer.train_network(trainLoader);
         logger.info("Epoch {:04d} completed with TLOSS {:.5f}".format(ep,loss));
@@ -188,7 +193,7 @@ def main_worker(args):
             trainer.saveParameters(args.save_path+"/epoch{:04d}.model".format(ep));
 
             # Early Stopping Check
-            val_loss = EER  # Using EER as a proxy for validation loss
+            val_loss = EER  
             early_stopping(val_loss, model)
 
             if early_stopping.early_stop:

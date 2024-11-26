@@ -27,7 +27,6 @@ class EmbedNet(nn.Module):
         self.nPerClass = nPerClass
 
     def forward(self, data, label=None):
-
         data    = data.reshape(-1,data.size()[-3],data.size()[-2],data.size()[-1])
         outp    = self.__E__.forward(data)
 
@@ -43,17 +42,13 @@ class EmbedNet(nn.Module):
 class ModelTrainer(object):
 
     def __init__(self, embed_model, optimizer, scheduler, **kwargs):
-
         self.__model__  = embed_model
-
         ## Optimizer (e.g. Adam or SGD)
         Optimizer = importlib.import_module('optimizer.'+optimizer).__getattribute__('Optimizer')
         self.__optimizer__ = Optimizer(self.__model__.parameters(), **kwargs)
-
         ## Learning rate scheduler
         Scheduler = importlib.import_module('scheduler.'+scheduler).__getattribute__('Scheduler')
         self.__scheduler__, self.lr_step = Scheduler(self.__optimizer__, **kwargs)
-
         assert self.lr_step in ['epoch', 'iteration']
 
     # ## ===== ===== ===== ===== ===== ===== ===== =====
@@ -61,20 +56,14 @@ class ModelTrainer(object):
     # ## ===== ===== ===== ===== ===== ===== ===== =====
 
     def train_network(self, loader):
-
         self.__model__.train();
-
         stepsize = loader.batch_size;
-
         counter = 0;
         loss    = 0;
 
         with tqdm(loader, unit="batch") as tepoch:
-        
             for data, label in tepoch:
-
                 tepoch.total = tepoch.__len__()
-
                 data    = data.transpose(1,0)
 
                 ## Reset gradients
@@ -82,8 +71,10 @@ class ModelTrainer(object):
 
                 ## Forward pass and compute loss
                 nloss = self.__model__(data.cuda(), label.cuda())
+
                 ## Backward pass
                 nloss.backward()
+
                 ## Optimizer step
                 self.__optimizer__.step()
 
@@ -108,7 +99,6 @@ class ModelTrainer(object):
     def evaluateFromList(self, test_list, test_path, nDataLoaderThread, transform, print_interval=100, num_eval=10, **kwargs):
         
         self.__model__.eval();
-        
         feats       = {}
 
         ## Read all lines
