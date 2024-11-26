@@ -1,3 +1,5 @@
+Train2 has more transforms than train1, where theres more random image augmentations than for train1
+
 trained efficient net with 8 epochs on train1 and then up to 17 on train2 to get eer or 11.02%
     trained with adam with batch size 85 then 25
 
