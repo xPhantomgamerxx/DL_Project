@@ -136,7 +136,7 @@ def main_worker(args):
          transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
 
     ## Initialise trainer and data loader
-    trainLoader = get_data_loader(transform=train2_transform, **vars(args)); # change the train transform between the train1 and train2 tranform
+    trainLoader = get_data_loader(transform=train_transform, **vars(args)); # change the train transform between the train1 and train2 tranform
     trainer     = ModelTrainer(model, **vars(args))
 
     ## Load model weights

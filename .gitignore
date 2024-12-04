@@ -1,9 +1,10 @@
 # Other files
 *.model
 *.sh
-*.csv
 data/
 exps/
+ee488_24_test/
+ee488_24_test.zip
 core.*
 
 # Byte-compiled / optimized / DLL files
