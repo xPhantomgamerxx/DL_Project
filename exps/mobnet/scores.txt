@@ -1,0 +1,113 @@
+[INFO] :: 2024-11-18 00:32:39 :: Namespace(batch_size=100, max_img_per_cls=500, nDataLoaderThread=5, test_interval=5, max_epoch=50, trainfunc='softmax', optimizer='adam', scheduler='steplr', lr=0.001, lr_decay=0.9, weight_decay=0, margin=0.1, scale=30, nPerClass=1, nClasses=9500, initial_model='', save_path='mobnet', train_path='/mnt/home/joonson/ee488_24_data/train1', train_ext='jpg', test_path='/mnt/home/joonson/ee488_24_data/val', test_list='/mnt/home/joonson/ee488_24_data/val_pairs.csv', model='MobileNetV2', nOut=512, eval=False, output='', gpu=3)
+[INFO] :: 2024-11-18 00:32:39 :: Epoch 0001 started with LR 0.00100 
+[INFO] :: 2024-11-18 00:33:22 :: Namespace(batch_size=100, max_img_per_cls=500, nDataLoaderThread=5, test_interval=5, max_epoch=50, trainfunc='softmax', optimizer='adam', scheduler='steplr', lr=0.001, lr_decay=0.9, weight_decay=0, margin=0.1, scale=30, nPerClass=1, nClasses=9500, initial_model='', save_path='mobnet', train_path='/mnt/home/joonson/ee488_24_data/train1', train_ext='jpg', test_path='/mnt/home/joonson/ee488_24_data/val', test_list='/mnt/home/joonson/ee488_24_data/val_pairs.csv', model='MobileNetV2', nOut=512, eval=False, output='', gpu=3)
+[INFO] :: 2024-11-18 00:33:22 :: Epoch 0001 started with LR 0.00100 
+[INFO] :: 2024-11-18 01:47:37 :: Epoch 0001 completed with TLOSS 4.69452
+[INFO] :: 2024-11-18 01:47:37 :: Epoch 0002 started with LR 0.00100 
+[INFO] :: 2024-11-18 03:01:41 :: Epoch 0002 completed with TLOSS 1.75465
+[INFO] :: 2024-11-18 03:01:41 :: Epoch 0003 started with LR 0.00100 
+[INFO] :: 2024-11-18 04:15:45 :: Epoch 0003 completed with TLOSS 1.07968
+[INFO] :: 2024-11-18 04:15:45 :: Epoch 0004 started with LR 0.00100 
+[INFO] :: 2024-11-18 05:29:47 :: Epoch 0004 completed with TLOSS 0.78790
+[INFO] :: 2024-11-18 05:29:47 :: Epoch 0005 started with LR 0.00100 
+[INFO] :: 2024-11-18 06:43:50 :: Epoch 0005 completed with TLOSS 0.61887
+[INFO] :: 2024-11-18 06:44:24 :: Epoch 0005, Val EER 21.60%
+[INFO] :: 2024-11-18 06:44:24 :: Epoch 0006 started with LR 0.00090 
+[INFO] :: 2024-11-18 07:58:26 :: Epoch 0006 completed with TLOSS 0.48565
+[INFO] :: 2024-11-18 07:58:26 :: Epoch 0007 started with LR 0.00090 
+[INFO] :: 2024-11-18 09:12:28 :: Epoch 0007 completed with TLOSS 0.41650
+[INFO] :: 2024-11-18 09:12:28 :: Epoch 0008 started with LR 0.00090 
+[INFO] :: 2024-11-18 10:26:32 :: Epoch 0008 completed with TLOSS 0.36581
+[INFO] :: 2024-11-18 10:26:32 :: Epoch 0009 started with LR 0.00090 
+[INFO] :: 2024-11-18 11:44:29 :: Epoch 0009 completed with TLOSS 0.32615
+[INFO] :: 2024-11-18 11:44:29 :: Epoch 0010 started with LR 0.00090 
+[INFO] :: 2024-11-18 12:58:47 :: Epoch 0010 completed with TLOSS 0.29451
+[INFO] :: 2024-11-18 12:59:22 :: Epoch 0010, Val EER 22.64%
+[INFO] :: 2024-11-18 12:59:22 :: Epoch 0011 started with LR 0.00081 
+[INFO] :: 2024-11-18 14:14:22 :: Epoch 0011 completed with TLOSS 0.25102
+[INFO] :: 2024-11-18 14:14:22 :: Epoch 0012 started with LR 0.00081 
+[INFO] :: 2024-11-18 15:29:09 :: Epoch 0012 completed with TLOSS 0.22852
+[INFO] :: 2024-11-18 15:29:09 :: Epoch 0013 started with LR 0.00081 
+[INFO] :: 2024-11-18 16:43:47 :: Epoch 0013 completed with TLOSS 0.21145
+[INFO] :: 2024-11-18 16:43:47 :: Epoch 0014 started with LR 0.00081 
+[INFO] :: 2024-11-18 17:58:28 :: Epoch 0014 completed with TLOSS 0.19668
+[INFO] :: 2024-11-18 17:58:28 :: Epoch 0015 started with LR 0.00081 
+[INFO] :: 2024-11-18 19:14:45 :: Epoch 0015 completed with TLOSS 0.18397
+[INFO] :: 2024-11-18 19:15:20 :: Epoch 0015, Val EER 23.29%
+[INFO] :: 2024-11-18 19:15:21 :: Epoch 0016 started with LR 0.00073 
+[INFO] :: 2024-11-18 20:30:00 :: Epoch 0016 completed with TLOSS 0.15970
+[INFO] :: 2024-11-18 20:30:00 :: Epoch 0017 started with LR 0.00073 
+[INFO] :: 2024-11-18 21:44:41 :: Epoch 0017 completed with TLOSS 0.14903
+[INFO] :: 2024-11-18 21:44:41 :: Epoch 0018 started with LR 0.00073 
+[INFO] :: 2024-11-18 22:59:10 :: Epoch 0018 completed with TLOSS 0.14039
+[INFO] :: 2024-11-18 22:59:10 :: Epoch 0019 started with LR 0.00073 
+[INFO] :: 2024-11-19 00:13:32 :: Epoch 0019 completed with TLOSS 0.13245
+[INFO] :: 2024-11-19 00:13:32 :: Epoch 0020 started with LR 0.00073 
+[INFO] :: 2024-11-19 01:27:58 :: Epoch 0020 completed with TLOSS 0.12594
+[INFO] :: 2024-11-19 01:28:31 :: Epoch 0020, Val EER 21.37%
+[INFO] :: 2024-11-19 01:28:31 :: Epoch 0021 started with LR 0.00066 
+[INFO] :: 2024-11-19 02:42:58 :: Epoch 0021 completed with TLOSS 0.10851
+[INFO] :: 2024-11-19 02:42:58 :: Epoch 0022 started with LR 0.00066 
+[INFO] :: 2024-11-19 03:57:28 :: Epoch 0022 completed with TLOSS 0.10279
+[INFO] :: 2024-11-19 03:57:28 :: Epoch 0023 started with LR 0.00066 
+[INFO] :: 2024-11-19 05:11:50 :: Epoch 0023 completed with TLOSS 0.09821
+[INFO] :: 2024-11-19 05:11:50 :: Epoch 0024 started with LR 0.00066 
+[INFO] :: 2024-11-19 06:26:26 :: Epoch 0024 completed with TLOSS 0.09350
+[INFO] :: 2024-11-19 06:26:26 :: Epoch 0025 started with LR 0.00066 
+[INFO] :: 2024-11-19 07:40:50 :: Epoch 0025 completed with TLOSS 0.08982
+[INFO] :: 2024-11-19 07:41:27 :: Epoch 0025, Val EER 21.78%
+[INFO] :: 2024-11-19 07:41:27 :: Epoch 0026 started with LR 0.00059 
+[INFO] :: 2024-11-19 08:55:44 :: Epoch 0026 completed with TLOSS 0.07810
+[INFO] :: 2024-11-19 08:55:44 :: Epoch 0027 started with LR 0.00059 
+[INFO] :: 2024-11-19 10:10:07 :: Epoch 0027 completed with TLOSS 0.07350
+[INFO] :: 2024-11-19 10:10:07 :: Epoch 0028 started with LR 0.00059 
+[INFO] :: 2024-11-19 11:24:32 :: Epoch 0028 completed with TLOSS 0.07097
+[INFO] :: 2024-11-19 11:24:32 :: Epoch 0029 started with LR 0.00059 
+[INFO] :: 2024-11-19 12:39:10 :: Epoch 0029 completed with TLOSS 0.06886
+[INFO] :: 2024-11-19 12:39:10 :: Epoch 0030 started with LR 0.00059 
+[INFO] :: 2024-11-19 13:54:01 :: Epoch 0030 completed with TLOSS 0.06583
+[INFO] :: 2024-11-19 13:54:35 :: Epoch 0030, Val EER 22.92%
+[INFO] :: 2024-11-19 13:54:35 :: Epoch 0031 started with LR 0.00053 
+[INFO] :: 2024-11-19 15:09:37 :: Epoch 0031 completed with TLOSS 0.05717
+[INFO] :: 2024-11-19 15:09:37 :: Epoch 0032 started with LR 0.00053 
+[INFO] :: 2024-11-19 16:34:04 :: Epoch 0032 completed with TLOSS 0.05443
+[INFO] :: 2024-11-19 16:34:04 :: Epoch 0033 started with LR 0.00053 
+[INFO] :: 2024-11-19 17:49:17 :: Epoch 0033 completed with TLOSS 0.05305
+[INFO] :: 2024-11-19 17:49:17 :: Epoch 0034 started with LR 0.00053 
+[INFO] :: 2024-11-19 19:04:00 :: Epoch 0034 completed with TLOSS 0.05141
+[INFO] :: 2024-11-19 19:04:00 :: Epoch 0035 started with LR 0.00053 
+[INFO] :: 2024-11-19 20:18:44 :: Epoch 0035 completed with TLOSS 0.04973
+[INFO] :: 2024-11-19 20:19:18 :: Epoch 0035, Val EER 22.05%
+[INFO] :: 2024-11-19 20:19:18 :: Epoch 0036 started with LR 0.00048 
+[INFO] :: 2024-11-19 21:34:02 :: Epoch 0036 completed with TLOSS 0.04372
+[INFO] :: 2024-11-19 21:34:02 :: Epoch 0037 started with LR 0.00048 
+[INFO] :: 2024-11-19 22:48:47 :: Epoch 0037 completed with TLOSS 0.04165
+[INFO] :: 2024-11-19 22:48:47 :: Epoch 0038 started with LR 0.00048 
+[INFO] :: 2024-11-20 00:03:31 :: Epoch 0038 completed with TLOSS 0.04003
+[INFO] :: 2024-11-20 00:03:31 :: Epoch 0039 started with LR 0.00048 
+[INFO] :: 2024-11-20 01:18:16 :: Epoch 0039 completed with TLOSS 0.03963
+[INFO] :: 2024-11-20 01:18:16 :: Epoch 0040 started with LR 0.00048 
+[INFO] :: 2024-11-20 02:33:01 :: Epoch 0040 completed with TLOSS 0.03827
+[INFO] :: 2024-11-20 02:33:35 :: Epoch 0040, Val EER 21.19%
+[INFO] :: 2024-11-20 02:33:36 :: Epoch 0041 started with LR 0.00043 
+[INFO] :: 2024-11-20 03:48:21 :: Epoch 0041 completed with TLOSS 0.03334
+[INFO] :: 2024-11-20 03:48:21 :: Epoch 0042 started with LR 0.00043 
+[INFO] :: 2024-11-20 05:03:04 :: Epoch 0042 completed with TLOSS 0.03244
+[INFO] :: 2024-11-20 05:03:04 :: Epoch 0043 started with LR 0.00043 
+[INFO] :: 2024-11-20 06:17:46 :: Epoch 0043 completed with TLOSS 0.03179
+[INFO] :: 2024-11-20 06:17:46 :: Epoch 0044 started with LR 0.00043 
+[INFO] :: 2024-11-20 07:32:27 :: Epoch 0044 completed with TLOSS 0.03075
+[INFO] :: 2024-11-20 07:32:27 :: Epoch 0045 started with LR 0.00043 
+[INFO] :: 2024-11-20 08:47:11 :: Epoch 0045 completed with TLOSS 0.03046
+[INFO] :: 2024-11-20 08:47:44 :: Epoch 0045, Val EER 22.15%
+[INFO] :: 2024-11-20 08:47:44 :: Epoch 0046 started with LR 0.00039 
+[INFO] :: 2024-11-20 10:02:27 :: Epoch 0046 completed with TLOSS 0.02660
+[INFO] :: 2024-11-20 10:02:27 :: Epoch 0047 started with LR 0.00039 
+[INFO] :: 2024-11-20 11:17:12 :: Epoch 0047 completed with TLOSS 0.02530
+[INFO] :: 2024-11-20 11:17:12 :: Epoch 0048 started with LR 0.00039 
+[INFO] :: 2024-11-20 12:31:58 :: Epoch 0048 completed with TLOSS 0.02514
+[INFO] :: 2024-11-20 12:31:58 :: Epoch 0049 started with LR 0.00039 
+[INFO] :: 2024-11-20 13:46:57 :: Epoch 0049 completed with TLOSS 0.02452
+[INFO] :: 2024-11-20 13:46:57 :: Epoch 0050 started with LR 0.00039 
+[INFO] :: 2024-11-20 15:02:03 :: Epoch 0050 completed with TLOSS 0.02458
+[INFO] :: 2024-11-20 15:02:39 :: Epoch 0050, Val EER 21.57%

@@ -2,7 +2,7 @@
 *.model
 *.sh
 data/
-exps/
+
 ee488_24_test/
 ee488_24_test.zip
 core.*

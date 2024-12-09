@@ -1,0 +1,59 @@
+[INFO] :: 2024-11-25 21:28:27 :: Namespace(batch_size=100, max_img_per_cls=500, nDataLoaderThread=5, test_interval=1, max_epoch=10, trainfunc='softmax', optimizer='adam', scheduler='steplr', lr=0.001, lr_decay=0.9, weight_decay=0, margin=0.1, scale=30, nPerClass=1, nClasses=9500, initial_model='', save_path='exps/resnet', train_path='/mnt/home/joonson/ee488_24_data/train1', train_ext='jpg', test_path='/mnt/home/joonson/ee488_24_data/val', test_list='/mnt/home/joonson/ee488_24_data/val_pairs.csv', model='ResNet18', nOut=512, eval=False, output='', gpu=3)
+[INFO] :: 2024-11-25 21:28:27 :: Epoch 0001 started with LR 0.00100 
+[INFO] :: 2024-11-25 22:19:29 :: Epoch 0001 completed with TLOSS 3.58157
+[INFO] :: 2024-11-25 22:19:56 :: Epoch 0001, Val EER 24.81%
+[INFO] :: 2024-11-25 22:19:56 :: Epoch 0002 started with LR 0.00090 
+[INFO] :: 2024-11-25 23:10:51 :: Epoch 0002 completed with TLOSS 0.95977
+[INFO] :: 2024-11-25 23:11:17 :: Epoch 0002, Val EER 22.14%
+[INFO] :: 2024-11-25 23:11:18 :: Epoch 0003 started with LR 0.00081 
+[INFO] :: 2024-11-26 00:02:29 :: Epoch 0003 completed with TLOSS 0.57032
+[INFO] :: 2024-11-26 00:02:56 :: Epoch 0003, Val EER 20.36%
+[INFO] :: 2024-11-26 00:02:56 :: Epoch 0004 started with LR 0.00073 
+[INFO] :: 2024-11-26 00:54:26 :: Epoch 0004 completed with TLOSS 0.39947
+[INFO] :: 2024-11-26 00:54:53 :: Epoch 0004, Val EER 21.07%
+[INFO] :: 2024-11-26 00:54:53 :: Epoch 0005 started with LR 0.00066 
+[INFO] :: 2024-11-26 01:46:35 :: Epoch 0005 completed with TLOSS 0.29577
+[INFO] :: 2024-11-26 01:47:02 :: Epoch 0005, Val EER 20.71%
+[INFO] :: 2024-11-26 01:47:02 :: Epoch 0006 started with LR 0.00059 
+[INFO] :: 2024-11-26 02:38:10 :: Epoch 0006 completed with TLOSS 0.22706
+[INFO] :: 2024-11-26 02:38:33 :: Epoch 0006, Val EER 20.63%
+[INFO] :: 2024-11-26 02:38:34 :: Epoch 0007 started with LR 0.00053 
+[INFO] :: 2024-11-26 03:28:30 :: Epoch 0007 completed with TLOSS 0.17623
+[INFO] :: 2024-11-26 03:28:52 :: Epoch 0007, Val EER 19.61%
+[INFO] :: 2024-11-26 03:28:52 :: Epoch 0008 started with LR 0.00048 
+[INFO] :: 2024-11-26 04:18:29 :: Epoch 0008 completed with TLOSS 0.13868
+[INFO] :: 2024-11-26 04:18:48 :: Epoch 0008, Val EER 20.45%
+[INFO] :: 2024-11-26 10:04:29 :: Namespace(batch_size=30, max_img_per_cls=500, nDataLoaderThread=5, test_interval=1, max_epoch=20, trainfunc='softmax', optimizer='adam', scheduler='steplr', lr=0.001, lr_decay=0.9, weight_decay=0, margin=0.1, scale=30, nPerClass=1, nClasses=9500, initial_model='/mnt/home/20246429/ee488_24_face/exps/resnet/epoch0007.model', save_path='exps/resnet', train_path='/mnt/home/joonson/ee488_24_data/train2', train_ext='jpg', test_path='/mnt/home/joonson/ee488_24_data/val', test_list='/mnt/home/joonson/ee488_24_data/val_pairs.csv', model='ResNet18', nOut=512, eval=False, output='', gpu=3)
+[INFO] :: 2024-11-26 10:04:29 :: Epoch 0009 started with LR 0.00043 
+[INFO] :: 2024-11-26 10:12:01 :: Epoch 0009 completed with TLOSS 6.68033
+[INFO] :: 2024-11-26 10:12:20 :: Epoch 0009, Val EER 19.42%
+[INFO] :: 2024-11-26 10:12:21 :: Epoch 0010 started with LR 0.00039 
+[INFO] :: 2024-11-26 10:18:16 :: Epoch 0010 completed with TLOSS 4.74653
+[INFO] :: 2024-11-26 10:18:35 :: Epoch 0010, Val EER 13.06%
+[INFO] :: 2024-11-26 10:18:36 :: Epoch 0011 started with LR 0.00035 
+[INFO] :: 2024-11-26 10:25:25 :: Epoch 0011 completed with TLOSS 3.81271
+[INFO] :: 2024-11-26 10:25:49 :: Epoch 0011, Val EER 11.10%
+[INFO] :: 2024-11-26 10:25:49 :: Epoch 0012 started with LR 0.00031 
+[INFO] :: 2024-11-26 10:33:20 :: Epoch 0012 completed with TLOSS 3.35067
+[INFO] :: 2024-11-26 10:33:44 :: Epoch 0012, Val EER 10.92%
+[INFO] :: 2024-11-26 10:33:45 :: Epoch 0013 started with LR 0.00028 
+[INFO] :: 2024-11-26 10:41:18 :: Epoch 0013 completed with TLOSS 3.08088
+[INFO] :: 2024-11-26 10:41:43 :: Epoch 0013, Val EER 10.20%
+[INFO] :: 2024-11-26 10:41:44 :: Epoch 0014 started with LR 0.00025 
+[INFO] :: 2024-11-26 10:49:40 :: Epoch 0014 completed with TLOSS 2.88293
+[INFO] :: 2024-11-26 10:50:06 :: Epoch 0014, Val EER 9.94%
+[INFO] :: 2024-11-26 10:50:06 :: Epoch 0015 started with LR 0.00023 
+[INFO] :: 2024-11-26 10:58:03 :: Epoch 0015 completed with TLOSS 2.73545
+[INFO] :: 2024-11-26 10:58:28 :: Epoch 0015, Val EER 9.44%
+[INFO] :: 2024-11-26 10:58:28 :: Epoch 0016 started with LR 0.00021 
+[INFO] :: 2024-11-26 11:06:03 :: Epoch 0016 completed with TLOSS 2.61235
+[INFO] :: 2024-11-26 11:06:28 :: Epoch 0016, Val EER 9.60%
+[INFO] :: 2024-11-26 11:06:28 :: Epoch 0017 started with LR 0.00019 
+[INFO] :: 2024-11-26 11:14:25 :: Epoch 0017 completed with TLOSS 2.49908
+[INFO] :: 2024-11-26 11:14:51 :: Epoch 0017, Val EER 9.74%
+[INFO] :: 2024-11-26 11:14:51 :: Epoch 0018 started with LR 0.00017 
+[INFO] :: 2024-11-26 11:23:24 :: Epoch 0018 completed with TLOSS 2.41316
+[INFO] :: 2024-11-26 11:23:58 :: Epoch 0018, Val EER 9.63%
+[INFO] :: 2024-11-26 11:23:59 :: Epoch 0019 started with LR 0.00015 
+[INFO] :: 2024-11-26 11:34:26 :: Epoch 0019 completed with TLOSS 2.33239
+[INFO] :: 2024-11-26 11:34:58 :: Epoch 0019, Val EER 9.63%

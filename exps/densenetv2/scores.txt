@@ -1,0 +1,6 @@
+[INFO] :: 2024-12-09 16:50:25 :: Namespace(batch_size=25, max_img_per_cls=500, nDataLoaderThread=5, test_interval=5, max_epoch=21, trainfunc='softmax', optimizer='adam', scheduler='steplr', lr=0.001, lr_decay=0.9, weight_decay=0, margin=0.1, scale=30, nPerClass=1, nClasses=9500, initial_model='/mnt/home/20246429/ee488_24_face/exps/densenet/epoch0005.model', save_path='exps/densenetv2', train_path='/mnt/home/joonson/ee488_24_data/train2', train_ext='jpg', test_path='/mnt/home/joonson/ee488_24_data/val', test_list='/mnt/home/joonson/ee488_24_data/val_pairs.csv', model='DenseNet121', nOut=512, eval=False, output='', gpu=3)
+[INFO] :: 2024-12-09 16:50:25 :: Epoch 0001 started with LR 0.00100 
+[INFO] :: 2024-12-09 17:05:01 :: Epoch 0001 completed with TLOSS 6.54158
+[INFO] :: 2024-12-09 17:05:01 :: Epoch 0002 started with LR 0.00100 
+[INFO] :: 2024-12-09 17:19:39 :: Epoch 0002 completed with TLOSS 5.12635
+[INFO] :: 2024-12-09 17:19:39 :: Epoch 0003 started with LR 0.00100 

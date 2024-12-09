@@ -29,7 +29,7 @@ parser.add_argument('--max_img_per_cls',    type=int, default=500,	help='Maximum
 parser.add_argument('--nDataLoaderThread',  type=int, default=5, 	help='Number of data loader threads');
 
 ## Training details
-parser.add_argument('--test_interval',  type=int,   default=1,      help='Test and save every [test_interval] epochs');
+parser.add_argument('--test_interval',  type=int,   default=5,      help='Test and save every [test_interval] epochs');
 parser.add_argument('--max_epoch',      type=int,   default=25,     help='Maximum number of epochs');
 parser.add_argument('--trainfunc',      type=str,   default="softmax",  help='Loss function to use');
 
@@ -136,7 +136,7 @@ def main_worker(args):
          transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
 
     ## Initialise trainer and data loader
-    trainLoader = get_data_loader(transform=train2_transform, **vars(args)); # change the train transform between the train1 and train2 tranform
+    trainLoader = get_data_loader(transform=train_transform, **vars(args)); # change the train transform between the train1 and train2 tranform
     trainer     = ModelTrainer(model, **vars(args))
 
     ## Load model weights
