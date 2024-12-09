@@ -26,3 +26,5 @@
 [INFO] :: 2024-12-09 19:34:13 :: Epoch 0012 started with LR 0.00081 
 [INFO] :: 2024-12-09 19:48:50 :: Epoch 0012 completed with TLOSS 1.97991
 [INFO] :: 2024-12-09 19:48:50 :: Epoch 0013 started with LR 0.00081 
+[INFO] :: 2024-12-09 20:03:33 :: Epoch 0013 completed with TLOSS 1.81889
+[INFO] :: 2024-12-09 20:03:33 :: Epoch 0014 started with LR 0.00081 
