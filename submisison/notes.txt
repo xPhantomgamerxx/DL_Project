@@ -1,0 +1,5 @@
+To run the training a variation of the example command was used:
+python ./trainEmbedNet.py --gpu 3 --model MobileNetV2 --optimizer adam --max_epoch 5 --save_path exps/mobnet --train_path /mnt/home/joonson/ee488_24_data/train1 --batch_size 100
+
+For finetuning the command was changed to include the initial model and different dataset as well as reduced batch size:
+python ./trainEmbedNet.py --gpu 3 --model MobileNetV2 --optimizer adam --max_epoch 21 --save_path exps/mobnet --initial_model /mnt/home/20246429/ee488_24_face/exps/mobnetv2/epoch0005.model --train_path /mnt/home/joonson/ee488_24_data/train2 --batch_size 40
