@@ -8,3 +8,6 @@ trained densenet for 5 epochs with train 1 and then 10 epochs with train2, best 
 
 Resnet trained for 7 epochs with adam batch size 100 with train1 then 12 epochs with train2 best eer after epoch 19 9.63%
     trained with adam batch size 100 then 30
+
+SCORES:
+ResNET:EER is 10.785 pct
