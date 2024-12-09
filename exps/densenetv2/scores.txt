@@ -4,3 +4,25 @@
 [INFO] :: 2024-12-09 17:05:01 :: Epoch 0002 started with LR 0.00100 
 [INFO] :: 2024-12-09 17:19:39 :: Epoch 0002 completed with TLOSS 5.12635
 [INFO] :: 2024-12-09 17:19:39 :: Epoch 0003 started with LR 0.00100 
+[INFO] :: 2024-12-09 17:34:17 :: Epoch 0003 completed with TLOSS 4.32874
+[INFO] :: 2024-12-09 17:34:17 :: Epoch 0004 started with LR 0.00100 
+[INFO] :: 2024-12-09 17:49:00 :: Epoch 0004 completed with TLOSS 3.82083
+[INFO] :: 2024-12-09 17:49:00 :: Epoch 0005 started with LR 0.00100 
+[INFO] :: 2024-12-09 18:03:42 :: Epoch 0005 completed with TLOSS 3.42870
+[INFO] :: 2024-12-09 18:04:57 :: Epoch 0005, Val EER 12.35%
+[INFO] :: 2024-12-09 18:04:57 :: Epoch 0006 started with LR 0.00090 
+[INFO] :: 2024-12-09 18:19:40 :: Epoch 0006 completed with TLOSS 3.08840
+[INFO] :: 2024-12-09 18:19:40 :: Epoch 0007 started with LR 0.00090 
+[INFO] :: 2024-12-09 18:34:24 :: Epoch 0007 completed with TLOSS 2.85994
+[INFO] :: 2024-12-09 18:34:24 :: Epoch 0008 started with LR 0.00090 
+[INFO] :: 2024-12-09 18:49:03 :: Epoch 0008 completed with TLOSS 2.67841
+[INFO] :: 2024-12-09 18:49:03 :: Epoch 0009 started with LR 0.00090 
+[INFO] :: 2024-12-09 19:03:41 :: Epoch 0009 completed with TLOSS 2.50519
+[INFO] :: 2024-12-09 19:03:41 :: Epoch 0010 started with LR 0.00090 
+[INFO] :: 2024-12-09 19:18:20 :: Epoch 0010 completed with TLOSS 2.34435
+[INFO] :: 2024-12-09 19:19:34 :: Epoch 0010, Val EER 10.66%
+[INFO] :: 2024-12-09 19:19:35 :: Epoch 0011 started with LR 0.00081 
+[INFO] :: 2024-12-09 19:34:13 :: Epoch 0011 completed with TLOSS 2.14487
+[INFO] :: 2024-12-09 19:34:13 :: Epoch 0012 started with LR 0.00081 
+[INFO] :: 2024-12-09 19:48:50 :: Epoch 0012 completed with TLOSS 1.97991
+[INFO] :: 2024-12-09 19:48:50 :: Epoch 0013 started with LR 0.00081 
